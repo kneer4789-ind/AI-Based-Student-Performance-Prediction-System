@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+header {
+  background: #173b75;
+  color: white;
+  text-align: center;
+  padding: 28px 18px;
+}
+
+header h1 { margin: 0 0 8px; font-size: 28px; }
+header p { margin: 0; opacity: .9; }
+
+main {
+  width: min(900px, 92%);
+  margin: 30px auto;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+h2 { margin-top: 0; }
+.muted { color: #68758a; }
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+  margin-top: 22px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #ccd5e3;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 2px solid #8caaf0;
+  border-color: #315efb;
+}
+
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #315efb;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover { background: #244bd4; }
+
+.hidden { display: none; }
+
+.result { text-align: center; }
+
+.score {
+  width: 120px;
+  height: 120px;
+  margin: 18px auto;
+  border-radius: 50%;
+  background: #315efb;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.result h3 { margin: 8px 0; }
+
+#risk {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #18733b;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.details {
+  text-align: left;
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.recommendation {
+  text-align: left;
+  margin-top: 18px;
+  padding: 15px;
+  border-left: 4px solid #315efb;
+  background: #f1f5ff;
+}
+
+footer {
+  text-align: center;
+  color: #68758a;
+  font-size: 12px;
+  padding: 20px;
+}
+
+@media (max-width: 650px) {
+  .fields { grid-template-columns: 1fr; }
+  header h1 { font-size: 22px; }
+}

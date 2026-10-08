@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Based Student Performance Prediction System - Phase 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI-Based Student Performance Prediction System</h1>
+    <p>Phase 2 Working Prototype</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Student Performance Input</h2>
+      <p class="muted">Enter the student's current academic information.</p>
+
+      <form id="predictionForm">
+        <div class="fields">
+          <label>Student Name
+            <input id="name" type="text" placeholder="Enter student name" required>
+          </label>
+
+          <label>Attendance (%)
+            <input id="attendance" type="number" min="0" max="100" placeholder="e.g. 80" required>
+          </label>
+
+          <label>Previous Exam Marks (%)
+            <input id="previous" type="number" min="0" max="100" placeholder="e.g. 75" required>
+          </label>
+
+          <label>Assignment Score (%)
+            <input id="assignment" type="number" min="0" max="100" placeholder="e.g. 80" required>
+          </label>
+
+          <label>Internal / Quiz Marks (%)
+            <input id="internal" type="number" min="0" max="100" placeholder="e.g. 78" required>
+          </label>
+
+          <label>Study Hours / Day
+            <input id="study" type="number" min="0" max="16" step="0.5" placeholder="e.g. 4" required>
+          </label>
+        </div>
+
+        <button type="submit">Predict Performance</button>
+      </form>
+    </section>
+
+    <section id="result" class="card result hidden">
+      <h2>Prediction Result</h2>
+      <div class="score" id="score">0%</div>
+      <h3 id="performance">-</h3>
+      <p id="risk"></p>
+      <p id="summary"></p>
+
+      <div class="details">
+        <p><b>Student:</b> <span id="studentResult"></span></p>
+        <p><b>Attendance:</b> <span id="attendanceResult"></span></p>
+        <p><b>Academic Average:</b> <span id="academicResult"></span></p>
+        <p><b>Study Hours:</b> <span id="studyResult"></span></p>
+      </div>
+
+      <div class="recommendation">
+        <h3>Recommendation</h3>
+        <p id="recommendation"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI-Based Student Performance Prediction System | Phase 2</p>
+    <p>Graphic Era Deemed to be University, Dehradun</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
